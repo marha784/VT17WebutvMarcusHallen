@@ -10,6 +10,42 @@
 -webkit-animation-duration: 4s;
 }
 
+.shrink:hover{
+-webkit-transform: scale(0.5);
+-ms-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+.rotate:hover
+{
+-webkit-transform: rotateZ(-180deg);
+-ms-transform: rotateZ(-180deg);
+ transform: rotateZ(-180deg);
+}
+
+.border:hover
+{
+  box-shadow: inset 0 0 0 25px  #DC143C;
+}
+
+.clip:hover
+{
+-webkit-animation-name:shape;
+-webkit-animation-duration: 4s;
+}
+
+.skew:hover
+{
+-webkit-animation-name:skew;
+-webkit-animation-duration: 4s;
+}
+
+.move:hover
+{
+-webkit-animation-name:moving;
+-webkit-animation-duration: 5s;
+}
+
 
 body
 {
@@ -45,4 +81,72 @@ div
     25%  {opacity: 0.75;}
     50%  {opacity: 0.50;}
     100% {opacity: 0.25;}
+}
+
+
+@-webkit-keyframes shape{
+    0%   {clip-path: circle(100px at center);}
+    10%  {clip-path: circle(90px at center);}
+    25%  {clip-path: circle(80px at center);}
+    50%  {clip-path: circle(70px at center);}
+    75%  {clip-path: circle(60px at center);}
+    100% {clip-path: circle(50px at center);}
+}
+
+
+@-webkit-keyframes skew{
+    0%   {transform: skew(0deg,0deg);}
+    100% {transform: skew(180deg,180deg);}
+}
+
+
+@keyframes moving{
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    10% {
+        transform: translate3d(0px, 250px, 0px);
+        animation-timing-function: ease-out;
+    }
+    20% {
+        transform: translate3d(500px, 250px, 0px);
+    }
+
+    30% {
+        transform: translate3d(500px, 200px, 0px);
+    }
+
+    40%{
+         transform: translate3d(500px, 200px, 0px);
+    }
+
+    50%{
+        transform: translate3d(400px, 200px, 0px);
+    }
+    60%{
+        transform: translate3d(400px, 300px, 0px);
+    }
+
+    70%{
+        transform: translate3d(400px, 200px, 0px);
+    }
+
+    80%{
+        transform: translate3d(500px, 200px, 0px);
+    }
+
+    90%{
+        transform: translate3d(500px, 250px, 0px);
+    }
+
+    95% {
+        transform: translate3d(0px, 250px, 0px);
+    }
+    100%{
+
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-out;
+    }
+   
 }
