@@ -92,12 +92,10 @@ section
 
 
 @-webkit-keyframes shape{
-    0%   {clip-path: circle(100px at center);}
-    10%  {clip-path: circle(90px at center);}
-    25%  {clip-path: circle(80px at center);}
-    50%  {clip-path: circle(70px at center);}
-    75%  {clip-path: circle(60px at center);}
-    100% {clip-path: circle(50px at center);}
+    0%   {clip-path: inset(0px 0px 0px 0px);}
+    10%  {clip-path: inset(10px 40px 30px 40px);}
+    50%  {clip-path: inset(10px 40px 70px 40px);}
+    100% {clip-path: inset(10px 10px 30px 60px);}
 }
 
 @keyframes skew{
