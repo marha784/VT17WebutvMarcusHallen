@@ -91,10 +91,9 @@ section
     100% {clip-path: circle(50px at center);}
 }
 
-
-@-webkit-keyframes skew{
-    0%   {transform: skew(0deg,0deg);}
-    100% {transform: skew(180deg,180deg);}
+@keyframes skew{
+    from{transform: skew(0deg,0deg);}
+    to{transform: skew(180deg,180deg);}
 }
 
 
