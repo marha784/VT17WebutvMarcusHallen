@@ -13,14 +13,12 @@
 .shrink:hover{
 -webkit-transform: scale(0.5);
 -ms-transform: scale(0.5);
-transform: scale(0.5);
 }
 
 .rotate:hover
 {
 -webkit-transform: rotateZ(-180deg);
 -ms-transform: rotateZ(-180deg);
- transform: rotateZ(-180deg);
 }
 
 .border:hover
@@ -52,7 +50,7 @@ body
 padding: 20px;
 }
 
-div
+section
 {
 	float: left;
     margin: 10px;
