@@ -1,47 +1,42 @@
 
-.fade:hover
+.fade
 {
--webkit-animation-name:fade;
--webkit-animation-duration: 4s; 
+-webkit-animation: fade 3s infinite;
 }
 
-.rainbow:hover{
--webkit-animation-name:rainbow;
--webkit-animation-duration: 4s;
-}
-
-.shrink:hover{
--webkit-transform: scale(0.5);
--ms-transform: scale(0.5);
-}
-
-.rotate:hover
+.rainbow
 {
--webkit-transform: rotateZ(-180deg);
--ms-transform: rotateZ(-180deg);
+-webkit-animation: rainbow 4s infinite;
 }
 
-.border:hover
+.shrink
 {
-  box-shadow: inset 0 0 0 25px  #DC143C;
+-webkit-animation: shrink 2s infinite;
 }
 
-.clip:hover
+.rotate
 {
--webkit-animation-name:shape;
--webkit-animation-duration: 4s;
+-webkit-animation: rotation 1s infinite;
 }
 
-.skew:hover
+.border
 {
--webkit-animation-name:skew;
--webkit-animation-duration: 4s;
+-webkit-animation: border 1s infinite;
 }
 
-.move:hover
+.clip
 {
--webkit-animation-name:moving;
--webkit-animation-duration: 5s;
+-webkit-animation:shape 4s infinite;
+}
+
+.skew
+{
+-webkit-animation:skew 2s infinite;
+}
+
+.move
+{
+-webkit-animation:moving 5s infinite;
 }
 
 
@@ -65,6 +60,20 @@ section
     transition: all 0.3s;
 }
 
+@-webkit-keyframes shrink{
+  0% {transform: scale(1.0);}
+  100%{transform: scale(0.5);}
+ }
+
+ @-webkit-keyframes rotation{
+  0% {transform: rotateZ(0deg);}
+  100%{transform: rotateZ(-180deg);}
+ }
+
+@-webkit-keyframes border{
+  0%{box-shadow: inset 0 0 0 0px  #DC143C;}
+  100%{box-shadow: inset 0 0 0 25px  #DC143C;}
+ }
 
 @-webkit-keyframes rainbow{
     0%   {background-color: purple;}
@@ -93,7 +102,7 @@ section
 
 @keyframes skew{
     from{transform: skew(0deg,0deg);}
-    to{transform: skew(180deg,180deg);}
+    to{transform: skew(30deg,30deg);}
 }
 
 
