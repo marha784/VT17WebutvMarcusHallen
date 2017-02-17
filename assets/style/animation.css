@@ -98,13 +98,13 @@ section
     100% {clip-path: inset(10px 10px 30px 60px);}
 }
 
-@keyframes skew{
+@-webkit-keyframes skew{
     from{transform: skew(0deg,0deg);}
     to{transform: skew(30deg,30deg);}
 }
 
 
-@keyframes moving{
+@-webkit-keyframes moving{
     0% {
         transform: translate3d(0px, 0px, 0px);
         animation-timing-function: ease-in;
