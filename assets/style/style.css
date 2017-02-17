@@ -27,13 +27,9 @@ padding-right: 30px;
 
 .img{
   height:auto;
-  width:50%;
+  width:100%;
 }
 
-.ruta{
-  width: 50%;
-  height:50%;
-}
 .container {
   height:100%;
   width: 100%;
@@ -55,8 +51,8 @@ padding-right: 30px;
   color: white;
 }
 
-.left-menu {
-  width: 20%;
+.aside{
+  width: 24%;
   height: 75%;
   margin: 0;
   padding: 0;
@@ -67,8 +63,8 @@ padding-right: 30px;
   text-align: center;
 }
 
-.right-content {
-  width: 79%;
+.main{
+  width: 75%;
   height:75%;
   margin: 0;
   float: right;
