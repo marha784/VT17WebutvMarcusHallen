@@ -5,14 +5,14 @@ body{
 
 /** The calculator **/
 .calc{
-	box-shadow: 5px 2px 10px blue;
+	box-shadow: 5px 2px 10px grey;
 	border-color: black;
 	border-width: 2px;
 	border-radius: 15px;
 	border-style: solid;
 	display: inline-block;
 	padding: 10px;
-	background-color: hotpink;
+	background-color: red;
 }
 
 .calc__display{

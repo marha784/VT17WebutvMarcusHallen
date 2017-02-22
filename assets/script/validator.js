@@ -59,7 +59,10 @@ function checkSumma(persNr){
       console.log(summa);
       summa=10-summa;
       console.log(summa);
-      
+    
+    if(summa===10){
+      summa=0;
+    }
 
     if(summa===parseInt(x4)){
     	document.getElementById("idNumberResult").innerHTML = "TRUE";

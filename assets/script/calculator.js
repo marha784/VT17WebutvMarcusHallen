@@ -33,7 +33,7 @@ function doMath(){
     string=string.replace('--','-');
     string=string.replace('+-','+');
     string=string.replace('-+','-');
-    
+
 	document.getElementById("result").innerHTML=string;
 
 }
@@ -42,6 +42,7 @@ function calc(){
 
     summa=eval(string);
     console.log(string);
+    document.getElementById("results").innerHTML=string+"="+summa;
 	console.log(summa);
 	document.getElementById("result").innerHTML=summa;
 	string="";
