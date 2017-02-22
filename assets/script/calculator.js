@@ -1,6 +1,7 @@
 
 var string="";
-var summa= 0; 
+var summa= 0;
+var output=""; 
 
 function addListeners(){
 	
@@ -42,7 +43,8 @@ function calc(){
 
     summa=eval(string);
     console.log(string);
-    document.getElementById("results").innerHTML=string+"="+summa;
+    output+=string+"="+summa+"<br>";
+    document.getElementById("results").innerHTML=output;
 	console.log(summa);
 	document.getElementById("result").innerHTML=summa;
 	string="";

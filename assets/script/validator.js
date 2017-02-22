@@ -1,3 +1,6 @@
+
+
+
 function addListeners(){
 
 document.getElementById("idNumber").addEventListener("input", checkSocial);
@@ -15,32 +18,45 @@ function checkSocial(){
 	{
 		if(persNr.length===10)
 		{
-	     persNr = persNr.slice(0, 6) + "-" + persNr.slice(6);
-		 console.log(persNr);
-        } 
-        else
-        {
-         persNr= persNr.slice(0, 8) + "-" + persNr.slice(8);
-         console.log(persNr);
-        }
-     }
-     persNr=persNr.replace('-','');
-        
-        if(persNr.length===10) 
-        {
-          checkSumma(persNr);
-        }
+	     checkSumma(persNr);
+    } 
+    if(persNr.length===12) 
+    {
+      persNr = persNr.substring(2);
+      checkSumma(persNr);
+    } 
+    
+  }
 
-        if(persNr.length===12) 
-        {
-          persNr = persNr.substring(2);
-          checkSumma(persNr);
-        }
+
+  if(persNr.indexOf("-")===8 && persNr.length===13)
+  {
+     persNr=persNr.replace('-', '');
+     persNr = persNr.substring(2);
+     checkSumma(persNr);
+
+  }
+  
+  if(persNr.indexOf("-")===6 && persNr.length===11)
+  {
+      persNr=persNr.replace('-', '');
+      checkSumma(persNr);
+  } 
+
+        
+
+ if(persNr.length<10||persNr.length===11)
+    {
+        document.getElementById("idNumberResult").innerHTML = "";
+    }
+
+
 }
 
 function checkSumma(persNr){
 
-	     var y1=persNr.substring(0,1);
+
+	       var y1=persNr.substring(0,1);
          var y2=persNr.substring(1,2);
          var m1=persNr.substring(2,3);
          var m2=persNr.substring(3,4);
@@ -50,8 +66,7 @@ function checkSumma(persNr){
          var x2=persNr.substring(7,8); 
          var x3=persNr.substring(8,9); 
          var x4=persNr.substring(9,10); 
-
-      
+ 
       var summa =(y1*2%10)+Math.floor(y1*2/10)+(y2*1)+(m1*2%10)+Math.floor(m1*2/10)+(m2*1)+
       Math.floor(d1*2/10)+(d1*2%10)+(d2*1)+Math.floor(x1*2/10)+(x1*2%10)+(x2*1)+(x3*2%10)+Math.floor(x3*2/10);
       console.log(summa);
@@ -63,12 +78,11 @@ function checkSumma(persNr){
     if(summa===10){
       summa=0;
     }
-
     if(summa===parseInt(x4)){
     	document.getElementById("idNumberResult").innerHTML = "TRUE";
     }
     else
-        document.getElementById("idNumberResult").innerHTML = "FALSE";
+      document.getElementById("idNumberResult").innerHTML = "FALSE";
 }  
       
  
