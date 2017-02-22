@@ -29,7 +29,11 @@ function doMath(){
     var input=this.innerText;  
     
     string+=input;
-
+    string=string.replace('++','+');
+    string=string.replace('--','-');
+    string=string.replace('+-','+');
+    string=string.replace('-+','-');
+    
 	document.getElementById("result").innerHTML=string;
 
 }
