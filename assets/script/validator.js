@@ -67,8 +67,7 @@ function checkSumma(persNr){
          var x3=persNr.substring(8,9); 
          var x4=persNr.substring(9,10); 
  
-      var summa =(y1*2%10)+Math.floor(y1*2/10)+(y2*1)+(m1*2%10)+Math.floor(m1*2/10)+(m2*1)+
-      Math.floor(d1*2/10)+(d1*2%10)+(d2*1)+Math.floor(x1*2/10)+(x1*2%10)+(x2*1)+(x3*2%10)+Math.floor(x3*2/10);
+      var summa =(y1*2%9)+(y2*1)+(m1*2%9)+(m2*1)+(d1*2%9)+(d2*1)+(x1*2%9)+(x2*1)+(x3*2%9);
       console.log(summa);
       summa=summa%10;
       console.log(summa);
