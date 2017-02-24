@@ -10,22 +10,22 @@ var action=document.getElementsByClassName("calc__sign");
 
 for(var i=0;i<buttons.length;i++){
 
-        buttons[i].addEventListener("click",doMath);
+        buttons[i].addEventListener("click",input);
   } 
 
 
 for(var i=0;i<2;i++){
 
-        action[i].addEventListener("click",doMath);
+        action[i].addEventListener("click",input);
   } 
-  action[2].addEventListener("click",calc)
+  action[2].addEventListener("click",calculate)
 }
 
 
 
    
 
-function doMath(){
+function input(){
     
     var input=this.innerText;  
     
@@ -39,7 +39,7 @@ function doMath(){
 
 }
 
-function calc(){
+function calculate(){
 
     summa=eval(string);
     console.log(string);

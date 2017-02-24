@@ -4,8 +4,8 @@
 function addListeners(){
 
 document.getElementById("idNumber").addEventListener("input", checkSocial);
-document.getElementById("leapYear").addEventListener("input", leapYear);
-document.getElementById("numberSum").addEventListener("input", numberSum);
+document.getElementById("leapYear").addEventListener("input", checkIfLeapYear);
+document.getElementById("numberSum").addEventListener("input", checkNumberSum);
 }
 
 
@@ -18,12 +18,12 @@ function checkSocial(){
 	{
 		if(persNr.length===10)
 		{
-	     checkSumma(persNr);
+	    checkIfValid(persNr);
     } 
     if(persNr.length===12) 
     {
       persNr = persNr.substring(2);
-      checkSumma(persNr);
+      checkIfValid(persNr);
     } 
     
   }
@@ -33,14 +33,14 @@ function checkSocial(){
   {
      persNr=persNr.replace('-', '');
      persNr = persNr.substring(2);
-     checkSumma(persNr);
+     checkIfValid(persNr);
 
   }
   
   if(persNr.indexOf("-")===6 && persNr.length===11)
   {
       persNr=persNr.replace('-', '');
-      checkSumma(persNr);
+      checkIfValid(persNr);
   } 
 
         
@@ -53,7 +53,7 @@ function checkSocial(){
 
 }
 
-function checkSumma(persNr){
+function checkIfValid(persNr){
 
 
 	       var y1=persNr.substring(0,1);
@@ -78,26 +78,26 @@ function checkSumma(persNr){
       summa=0;
     }
     if(summa===parseInt(x4)){
-    	document.getElementById("idNumberResult").innerHTML = "TRUE";
+    	document.getElementById("idNumberResult").innerHTML = "Godkänt";
     }
     else
-      document.getElementById("idNumberResult").innerHTML = "FALSE";
+      document.getElementById("idNumberResult").innerHTML = "Falskt";
 }  
       
  
-function leapYear(){
+function checkIfLeapYear(){
 	var year = document.getElementById("leapYear").value;
 
 	if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
 	{
-		document.getElementById("leapYearResult").innerHTML = "This is a leapyear!";
+		document.getElementById("leapYearResult").innerHTML = "Skottår";
 	} else 
 	{
-		document.getElementById("leapYearResult").innerHTML = "This is not a leapyear!";
+		document.getElementById("leapYearResult").innerHTML = "Ej skottår";
 	}
 }
 
-function numberSum(){
+function checkNumberSum(){
 
 	var input = document.getElementById("numberSum").value;
 	var array= input.split("").map(Number);
