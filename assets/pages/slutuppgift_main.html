@@ -4,7 +4,6 @@
 <link rel="stylesheet" type="text/css" href="../style/intro.css">
 <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Fudge Browney</title>
-<script src="../script/recept.js"></script>
 </head>
 <body>
 
@@ -17,9 +16,17 @@
 <article class="main">
 <section class="top">
 <h1 class="h1_left">Fudge Brownies</h1>	
+
 <div class="rating">
-<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+<span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
 </div>
+
+<section class="ratingsystem">
+<span id="nrOfVotes"></span> 
+<span>Röster</span>
+<span id="medelv"></span>
+</section>
+
 <figure>
 <img class="img_left" src="http://pre15.deviantart.net/05a9/th/pre/i/2011/107/e/1/chocolate_fudge_brownies_by_thrakki-d3e7z4c.jpg" alt="Image not found">
 <figcaption>
@@ -75,5 +82,7 @@ Antal bitar:
 </article>
 
 <footer class="footer"></footer>
+<script src="../script/rating.js"></script>
+<script src="../script/recept.js"></script>
 </body>
 </html>

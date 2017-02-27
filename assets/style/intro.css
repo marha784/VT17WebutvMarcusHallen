@@ -260,6 +260,8 @@ figcaption{
   float:left;
   color: rgb(90,190,229);
   padding-bottom:1%;
+  
+
 }
 .rating > span {
   display: inline-block;
@@ -270,4 +272,12 @@ figcaption{
 .rating > span:hover ~ span:before {
    content: "\2605";
    position: absolute;
+}
+
+.ratingsystem{
+  font-size: 15px;
+  padding-top: 2%;
+  padding-left: 2%;
+  font-family: Arial;
+  float:left;
 }
