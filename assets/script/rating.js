@@ -7,6 +7,7 @@ var rating;
 var votes;
 var output;
 var JSONObject;
+var response=" ";
 
 
 window.onload = loadRating();
@@ -31,7 +32,7 @@ function loadRating(){
 		
 		if(this.readyState === 4 && this.status === 200){
 		
-			var response = this.responseText;
+			response = this.responseText;
 			JSONObject = JSON.parse(this.responseText);
 			rating = JSONObject.rating;
 			votes = JSONObject.votes;
