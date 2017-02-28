@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
-<link rel="stylesheet" type="text/css" href="../style/intro.css">
-<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Fudge Browney</title>
+<link rel="stylesheet" type="text/css" href="../style/intro.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
 
 <header class="header">	
 </header>
 
-<section class="border_left"></section>
-<section class="border_right"></section>
+<div class="border_left"></div>
+<div class="border_right"></div>
 
-<article class="main">
+<main class="main">
+
 <section class="top">
+<header>
 <h1 class="h1_left">Fudge Brownies</h1>	
-
+</header>
 <div class="rating">
 <span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span><span class="star">☆</span>
 </div>
-
-<section class="ratingsystem">
-<span id="load"></span>
-<span id="nrOfVotes"></span> 
-<span id="voteText">Röster</span>
-<span id="medelv"></span>
-</section>
-
+<div class="ratingsystem">
+<span id="load"></span><span id="nrOfVotes"></span> <span id="medelv"></span>
+</div>
 <figure>
 <img class="img_left" src="http://pre15.deviantart.net/05a9/th/pre/i/2011/107/e/1/chocolate_fudge_brownies_by_thrakki-d3e7z4c.jpg" alt="Image not found">
 <figcaption>
@@ -36,19 +34,19 @@ Ett bakverk som få chokladälskare kan motstå... Kladdig brownie toppad med m�
 </figcaption>
 </figure>
 </section>
+
 <section class="content_left">
 <h2>Ingredienser</h2>	
 <label>
 Antal bitar:
+</label>
 <input readonly type="text" id="textInput" value="15">
 <input type ="range" id="piecesOfCake" value="15" min="15" max="90" step="15" oninput="updateTextInput(this.value);">
-</label>
 <h3>Chokladtryffel</h3>
 <ul>
 <li>150 g mörk choklad (55 %)</li>
 <li>1/2 dl vispgrädde</li>
 </ul>
-
 <h3>Brownie</h3>
 <ul>
 <li>150 g osaltat smör</li>
@@ -60,13 +58,12 @@ Antal bitar:
 <li>1 dl vetemjöl</li>
 <li>flingsalt, att strö över</li>
 </ul>
-
 </section>
 
 <section class="content_right">	
 <header>
-</header>
 <h2>Gör så här</h2>
+</header>
 <ol>
 <li>Hacka choklad och lägg den i en skål. Koka upp grädde, häll den över chokladen och låt stå i några minuter tills chokladen har smält. Rör ihop till en slät och fin tryffel. Täck med plastfolie och låt stå i rumstemperatur.</li>
 <li>Sätt ugnen på 160 grader. Smörj kanterna på en bakform, 20 x 20 cm, med smör och täck bottnen med bakplåtspapper.</li>
@@ -76,13 +73,14 @@ Antal bitar:
 <li>Fördela smeten jämnt i formen och grädda mitt i ugnen i 20–22 minuter. Låt svalna.</li>
 <li>Ta ut kakan ur formen och ta bort bakplåtspappret. Vänd kakan upp och ner och bred tryffeln ovanpå, toppa med flingsalt. Om tryffeln är för lös för att breda räcker det med en stund i kylen för att den ska stelna en aning.</li>
 <li>Låt sedan kakan stå i kylen så att tryffeln stelnar ordentligt, ca 40–50 minuter. Skär i bitar och servera dina brownies rumstempererade.</li>
-
+</ol>
 </section>
+</main>
+
+<footer class="footer">	
+</footer>
 
 
-</article>
-
-<footer class="footer"></footer>
 <script src="../script/rating.js"></script>
 <script src="../script/recept.js"></script>
 </body>

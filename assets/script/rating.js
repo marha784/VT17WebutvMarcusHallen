@@ -38,7 +38,7 @@ function loadRating(){
 			rating = JSONObject.rating;
 			votes = JSONObject.votes;
 			console.log(response);
-			document.getElementById("nrOfVotes").innerHTML=votes;
+			document.getElementById("nrOfVotes").innerHTML=votes+"Röster";
             setStarValue(rating);
 		}
 	}
@@ -81,7 +81,6 @@ function loading(){
 
        document.getElementById('load').style.visibility="visible";
 	   document.getElementById('nrOfVotes').style.visibility="hidden";
-       document.getElementById('voteText').style.visibility="hidden";
        document.getElementsByClassName('star')[0].style.visibility="hidden";
        document.getElementsByClassName('star')[1].style.visibility="hidden";
        document.getElementsByClassName('star')[2].style.visibility="hidden";
@@ -96,7 +95,6 @@ setTimeout(function(){
          document.getElementsByClassName('star')[2].style.visibility="visible";
          document.getElementsByClassName('star')[3].style.visibility="visible";
          document.getElementsByClassName('star')[4].style.visibility="visible";
-         document.getElementById('voteText').style.visibility="visible";
       },5000);
 
 }
