@@ -40,7 +40,7 @@ function loadRating(){
 			votes = JSONObject.votes;
 			console.log(response);
 			document.getElementById("nrOfVotes").innerHTML=votes+" röster";
-            setStarValue(rating);
+      setStarValue(rating);
 		}
 	}
 xhttp.open
@@ -80,7 +80,7 @@ function setStarValue(rating){
 
 function loading(){
 
-       document.getElementById('load').style.visibility="visible";
+     document.getElementById('load').style.visibility="visible";
 	   document.getElementById('nrOfVotes').style.visibility="hidden";
        document.getElementsByClassName('star')[0].style.visibility="hidden";
        document.getElementsByClassName('star')[1].style.visibility="hidden";

@@ -56,7 +56,6 @@ window.onload = function () {
     "use strict";
   
     if (typeof (Storage) !== "undefined") {
-        //Store the cakeamount 
         if (window.localStorage.getItem("fudgeCount")) {
             document.getElementById("piecesOfCake").value = parseInt(window.localStorage.getItem("fudgeCount"));
             updateRecipe();
