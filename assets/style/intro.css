@@ -281,3 +281,11 @@ figcaption{
   font-family: Arial;
   float:left;
 }
+
+#load{
+
+    width:5%;
+    height:5%;
+    position:fixed;
+    background:url(../resource/loading.gif) no-repeat;
+};
