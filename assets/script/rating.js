@@ -6,8 +6,8 @@ var elements =document.getElementsByClassName('star');
 var rating;
 var votes;
 var output;
-var JSONObject;
-var response=" ";
+var JSONObject="";
+var response="";
 
 window.onload = loadRating();
 window.omload = loading();
@@ -20,6 +20,7 @@ window.omload = loading();
 
 function voteAndLoad(){
    vote=(this.value);
+   console.log("your vote is "+vote);
    loading();
    addVote();
    loadRating();
@@ -38,7 +39,7 @@ function loadRating(){
 			rating = JSONObject.rating;
 			votes = JSONObject.votes;
 			console.log(response);
-			document.getElementById("nrOfVotes").innerHTML=votes+"Röster";
+			document.getElementById("nrOfVotes").innerHTML=votes+" röster";
             setStarValue(rating);
 		}
 	}

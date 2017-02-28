@@ -5,12 +5,12 @@ function setLocalStorage(){
     if(typeof Storage !== "undefined")
     {
        // LocalStorage and sessionStorage support!
-      if (window.localStorage.getItem("cakeCount")) {
+      if (window.localStorage.getItem("fudgeCount")) {
             var localCakeCount;
             localCakeCount = document.getElementById("piecesOfCake").value;
-            window.localStorage.setItem("cakeCount", localCakeCount);
+            window.localStorage.setItem("fudgeCount", localCakeCount);
         } else {
-            window.localStorage.setItem("cakeCount", 15);
+            window.localStorage.setItem("fudgeCount", 15);
         }
     }
 }
@@ -57,8 +57,8 @@ window.onload = function () {
   
     if (typeof (Storage) !== "undefined") {
         //Store the cakeamount 
-        if (window.localStorage.getItem("cakeCount")) {
-            document.getElementById("piecesOfCake").value = parseInt(window.localStorage.getItem("cakeCount"));
+        if (window.localStorage.getItem("fudgeCount")) {
+            document.getElementById("piecesOfCake").value = parseInt(window.localStorage.getItem("fudgeCount"));
             updateRecipe();
             document.getElementById("textInput").value=document.getElementById("piecesOfCake").value;
         }
